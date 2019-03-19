@@ -1,0 +1,24 @@
+<div class="alert alert-success" role="alert">
+    A simple danger alert—check it out! - Normal
+</div>
+
+<div [ngClass]="'alert-info'" class="alert" role="alert">
+    A simple danger alert—check it out! - [ngClass]="'alert-info'"
+</div>
+
+<div [ngClass]="alerta" class="alert" role="alert">
+    A simple danger alert—check it out! - [ngClass]="'alerta'"
+</div>
+
+<button type="button" class="btn btn-secondary" (click)="alerta = 'alert-secondary'">Secondary</button>
+<button type="button" class="btn btn-warning" (click)="alerta = 'alert-warning'">Warning</button>
+
+<br><br>
+
+<h3 [ngClass]=" { 'text-danger': propiedades.danger, 'text-info': !propiedades.danger } ">
+    Hola Mundillo
+</h3>
+
+<button (click)="propiedades.danger = !propiedades.danger" type="button" name="button" class="btn btn-danger" [ngClass]=" { 'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger } ">
+  Cambiar
+</button>
